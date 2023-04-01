@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+
+
+.container{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image:url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) ;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+h2{
+    color: #162918;
+    font-size: 3rem;
+    
+}
+
+
+.nav{
+    width: 100%;
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    margin-right: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #162918;
+    font-weight: 500;
+    position: relative;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-links a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+   
+    transform: scale(0);
+    transition: 0.4s;
+}
+  
+.nav-links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+    
+}
+
+.nav-links a:hover{
+    font-size: 1.7rem;
+}
+
+.primary-btn{
+    margin-left: 40px;
+    margin-right: 60px;
+    width: 160px;
+    height: 60px;
+    background: transparent;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 2px solod #162938;
+    outline: none;
+    color: #fff;
+    font-weight: 500px;
+    transition: 0.4s ease-in-out;
+}
+
+.primary-btn:hover{
+    background-color: #fff;
+    color: #162918;
+    width: 170px;
+    height: 70px;
+    font-size: 1.7rem;
+}
+
+.page{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: transparent;  
+    position: absolute; 
+    margin-left: 35%; 
+    margin-top: 4%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(9px);
+    transition: 0.4s ease-in;
+    margin-bottom: 8%;
+    overflow: hidden;
+    box-shadow: 2px;
+    transition:transform 0.5s ease, height 0.2s ease;
+    transform: scale(0);
+}  
+
+.page.active-btn{
+    transform: scale(1);
+}
+
+.page.active{
+  height: 550px;
+}
+
+.page .login-page{
+   transition: transform 0.18s ease;
+   transform: translateX(0);
+}
+
+.page.active .login-page{
+    transition: none;
+    transform: translateX(-500px);
+}
+
+.page .register-page{
+    position: absolute;
+    transform: translateX(500px);
+}
+
+.page.active .register-page{
+    transition: transform 0.18s ease;
+    transform: translateX(0);
+ }
+
+.entry input {
+    width: 350px;
+    height: 40px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid #162918;
+    padding: 0 35px 0 5px;
+    margin: 0 20px;
+}
+
+.entry input:focus~label,
+.entry input:valid~label{
+    top: -6px;
+}
+
+.register-page{
+    margin-left: 70px;
+}
+
+
+
+.login-page h2{
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-weight: 1000;
+}
+
+.register-page h2{
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+    font-weight: 1000;
+  }
+
+.entry label{
+    margin: 20px 20px;
+    font-size: 1.4rem;
+    color: #162918;
+    padding: 0;
+    
+}
+
+.page .fa-xmark{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162918;
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+}
+
+.login-page i {
+    color: #162918;
+    right: 5px;
+    margin: 5px 10px;
+    position: absolute;
+}
+
+.register-page i {
+    color: #162918;
+    right: 100px;
+    margin: 5px 10px;
+    position: absolute;
+}
+
+.check-box{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.check-box a{
+    text-decoration: none;
+    color: #2045639e;
+}
+
+.check-box label{
+    color: #162918;
+}
+.check-box input {
+    background-color: #162918;
+}
+
+ .login-btn{
+    width: 95%;
+    height: 60px;
+    background-color: #162918;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    outline: none;
+    margin: 30px 10px 20px 10px;
+}
+
+.register-btn{
+    width: 150%;
+    height: 60px;
+    background-color: #162918;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    outline: none;
+    margin: 30px 10px 20px 10px;
+}
+
+.register-link p{
+    margin: 10px;
+    color: #162918;
+}
+
+.register-link a{
+    text-decoration: none;
+    color: #2045639e;
+    font-weight: 300;
+}
